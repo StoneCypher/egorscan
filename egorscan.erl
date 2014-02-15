@@ -22,7 +22,7 @@
 %% 3> egorscan:list([ "http://google.com", "http://yahoo.com" ]).
 %% [{"http://google.com",
 %%  {200,
-%%   "<!doctype html><html itemscope=\"\" itemtype=\"http://schema.org...
+%%   "<!doctype html><html itemscope=\"\" itemtype=\"http://schema.org..."
 %%
 %% 4> egor_scan:get_alexa_list().
 %% ["http://google.com","http://facebook.com",
@@ -36,10 +36,10 @@
 %%  "http://yahoo.co.jp","http://360.cn","http://tmall.com",
 %%  "http://bing.com","http://yandex.ru","http://vk.com"]
 %%
-%% 4> egorscan:full_list().
-%% [{"http://google.com",
-%%  {200,
-%%   "<!doctype html><html itemscope=\"\" itemtype=\"http://schema.org...
+%% 5> egorscan:full_list().
+%% [[{"http://google.com",
+%%   {200,
+%%    "<!doctype html><html itemscope=\"\" itemtype=\"http://schema.org..."
 
 
 
