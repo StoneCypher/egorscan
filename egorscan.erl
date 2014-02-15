@@ -1,7 +1,7 @@
 
 -module(egorscan).
 
--export([ start/0, htget/1, list/1 ]).
+-export([ start/0, htget/1, get_alexa_list/0, list/1, full_list/0 ]).
 
 
 
@@ -51,7 +51,24 @@ htget(Thing) ->
 
 
 
+get_alexa_list() ->
+
+    { 200, Content }     = htget("http://www.alexa.com/topsites"),
+    { match, MatchList } = re:run(Content, "\<a href=\"/siteinfo/.*\"\>", [global, {capture,[0],list}]),
+    [ "http://" ++ lists:reverse(string:substr(lists:reverse(string:substr(Match, 20)), 3)) || [Match] <- MatchList ].
+
+
+
+
 
 list(L) ->
 
     [ { Target, htget(Target) } || Target <- L ].
+
+
+
+
+
+full_list() ->
+
+    egorscan:list(egorscan:get_alexa_list()).
