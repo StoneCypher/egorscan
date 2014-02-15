@@ -23,6 +23,23 @@
 %% [{"http://google.com",
 %%  {200,
 %%   "<!doctype html><html itemscope=\"\" itemtype=\"http://schema.org...
+%%
+%% 4> egor_scan:get_alexa_list().
+%% ["http://google.com","http://facebook.com",
+%%  "http://youtube.com","http://yahoo.com","http://baidu.com",
+%%  "http://wikipedia.org","http://qq.com","http://taobao.com",
+%%  "http://live.com","http://linkedin.com",
+%%  "http://sina.com.cn","http://twitter.com",
+%%  "http://amazon.com","http://hao123.com",
+%%  "http://google.co.in","http://blogspot.com",
+%%  "http://weibo.com","http://163.com","http://wordpress.com",
+%%  "http://yahoo.co.jp","http://360.cn","http://tmall.com",
+%%  "http://bing.com","http://yandex.ru","http://vk.com"]
+%%
+%% 4> egorscan:full_list().
+%% [{"http://google.com",
+%%  {200,
+%%   "<!doctype html><html itemscope=\"\" itemtype=\"http://schema.org...
 
 
 
